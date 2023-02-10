@@ -19,7 +19,6 @@ class Post(models.Model):
     date_publish = models.DateField(auto_now_add=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
-
     def __str__(self):
         return self.author.user.username
 

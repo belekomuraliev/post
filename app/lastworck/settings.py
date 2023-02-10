@@ -9,7 +9,6 @@ DEBUG = int(os.environ.get('DEBUG', 0))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -54,9 +53,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lastworck.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
