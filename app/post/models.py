@@ -23,7 +23,13 @@ class Post(models.Model):
         return self.author.user.username
 
     def total_mean_score(self):
-        mean = MeanScore.objects.filter(post=self).aggregate(avg=Avg('score'))
+        mean = MeanScore.objects.filter(post=self).aggregate(Avg('score'))
+        # mean = MeanScore.objects.filter(post=self)
+        # summ = 0
+        # for i in mean:
+        #     score = i.score
+        #     summ += score
+        # mean_sum = summ/mean.count()
         return mean
 
 

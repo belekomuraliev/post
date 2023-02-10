@@ -30,7 +30,7 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-    mean_score = serializers.ReadOnlyField(source='total_mean_score')
+    #mean_score = serializers.ReadOnlyField(source='total_mean_score')
 
     class Meta:
         model = Post
